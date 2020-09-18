@@ -1,3 +1,3 @@
 import path from "path";
 
-console.log("workinwg");
+console.log("working");
