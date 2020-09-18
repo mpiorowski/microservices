@@ -1,4 +1,4 @@
-version: "3"
+version: "3.1"
 services:
   listing-service:
     build: "./listing-service"
@@ -8,10 +8,13 @@ services:
       - ./listing-service:/opt/app
 
   listing-service-db:
-    image: mysql:5.7.20
+    image: postgres:12
     environment:
-      - MYSQL_ROOT_PASSWORD=password
-      - MYSQL_DATABASE=db
+      POSTGRES_PASSWORD: "12345"
+      POSTGRES_USER: user
+      POSTGRES_DB: db
+    ports: 
+        - 0.0.0.0:7200:5432
 
   users-service:
     build: "./users-service"
@@ -21,7 +24,10 @@ services:
       - ./users-service:/opt/app
 
   users-service-db:
-    image: mysql:5.7.20
+    image: postgres:12
     environment:
-      - MYSQL_ROOT_PASSWORD=password
-      - MYSQL_DATABASE=db
+      POSTGRES_PASSWORD: "12345"
+      POSTGRES_USER: user
+      POSTGRES_DB: db
+    ports: 
+        - 0.0.0.0:7201:5432
