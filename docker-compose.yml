@@ -6,6 +6,8 @@ services:
       - listing-service-db
     volumes:
       - ./listing-service:/opt/app
+    ports: 
+      - 0.0.0.0:7200:7200
 
   listing-service-db:
     image: postgres:12

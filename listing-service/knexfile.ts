@@ -1,6 +1,4 @@
-// Update with your config settings.
-
-module.exports = {
+const connection: { [k: string]: any } = {
   development: {
     client: "postgresql",
     connection: {
@@ -9,7 +7,7 @@ module.exports = {
       user: "admin",
       password: "12345",
       port: 5432,
-      charset: "utf8"
+      charset: "utf8",
     },
     pool: {
       min: 2,
@@ -52,3 +50,5 @@ module.exports = {
     },
   },
 };
+
+export = connection;
