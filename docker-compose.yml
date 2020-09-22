@@ -10,11 +10,11 @@ services:
   listing-service-db:
     image: postgres:12
     environment:
-      POSTGRES_PASSWORD: "12345"
-      POSTGRES_USER: user
+      POSTGRES_PASSWORD: 12345
+      POSTGRES_USER: admin
       POSTGRES_DB: db
     ports: 
-        - 0.0.0.0:7200:5432
+        - 0.0.0.0:7201:5432
 
   users-service:
     build: "./users-service"
@@ -26,8 +26,8 @@ services:
   users-service-db:
     image: postgres:12
     environment:
-      POSTGRES_PASSWORD: "12345"
-      POSTGRES_USER: user
+      POSTGRES_PASSWORD: 12345
+      POSTGRES_USER: admin
       POSTGRES_DB: db
     ports: 
-        - 0.0.0.0:7201:5432
+        - 0.0.0.0:7202:5432

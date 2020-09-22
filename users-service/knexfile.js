@@ -6,7 +6,7 @@ module.exports = {
     connection: {
       host: "users-service-db",
       database: "db",
-      user: "user",
+      user: "admin",
       password: "12345",
       port: 5432,
       charset: "utf8"

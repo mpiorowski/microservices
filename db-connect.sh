@@ -1,0 +1,1 @@
+pgcli postgresql://admin:12345@localhost:720$1/db
